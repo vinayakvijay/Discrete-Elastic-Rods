@@ -70,7 +70,7 @@ public:
 
         switch (test) {
         case 0:std::cout << "case 0: testing stretching and bending energy" << std::endl;
-            nv = 10;
+            nv = 20;
             x_.resize(nv*3);
             x_.setZero();
             theta.resize(nv-1);
@@ -91,7 +91,7 @@ public:
             params.gravity_enabled = true;
             break;
         case 1:std::cout << "case 1: testing twisting energy" << std::endl;
-            nv = 10;
+            nv = 20;
             x_.resize(nv*3);
             x_.setZero();
             theta.resize(nv-1);

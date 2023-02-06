@@ -9,17 +9,20 @@ if(NOT CMAKE_BUILD_TYPE)
 endif()
 
 # Find libigl
-find_package(libigl REQUIRED)
+# find_package(libigl REQUIRED)
 
 # Find Polyscope
 find_package(Polyscope REQUIRED)
   
 file(GLOB SRCFILES src/*.cpp src/*.h src/*.hpp)
 
+add_subdirectory(/home/vinayak/Documents/github_repos/libigl build)
+
+# add_subdirectory(/home/vinayak/Documents/github_repos/polyscope build)
+
 add_executable(${PROJECT_NAME} ${SRCFILES})
 target_include_directories( ${PROJECT_NAME} PUBLIC
 						    ${EIGEN3_INCLUDE_DIR}
-							${LIBIGL_INCLUDE_DIR}
 							./src
 							)
 
